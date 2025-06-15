@@ -40,6 +40,18 @@ MNE-Python
 
 [EEGLAB (Matlab) working pipline](https://github.com/mckuoling/ERP_CORE/tree/master/N400%20Analysis%20Files/N400/EEG_ERP_Processing)
 
+### Key Changes
+
+Since this project aimed to replicate the N400 results from the ERP CORE dataset, most preprocessing steps and filter parameters followed the original EEGLAB (MATLAB-based) script closely.
+
+One notable adjustment was in the handling of Independent Component Analysis (ICA). As the original authors noted, ICA is a algorithm that the results may vary with each run. In their MATLAB pipeline, the authors documented the specific ICA components that should be removed in order to replicate their original N400 results.
+
+However, since this implementation was done in MNE-Python rather than MATLAB, I adopted an alternative approach based on the [NeuroDataScience tutorial](https://neuraldatascience.io/7-eeg/erp_preprocessing.html#). Specifically, I used the `find_bads_eog()` method to automatically identify and remove EOG-related components. This allows for a more reproducible and automated workflow:
+
+```python
+eog_inds, eog_scores = ica.find_bads_eog(raw, threshold=3.0)
+print(f"Subject {subject_id} EOG-like ICA components:", eog_inds)
+
 
 ## Results
 
@@ -51,3 +63,10 @@ And this is the N400 I generated using the same dataset, after adapting the orig
 ![My N400 Output](my_n400_result.png)
 
 
+## Conclusion and acknowledgement
+
+I am very grateful for this course, which allowed me to learn data science in a completely new way. It helped me understand how to learn independently and find solutions. The course also introduced various tools that are commonly used in data science, which is a crucial foundation for beginners.
+
+I also sincerely appreciate the instructors and classmates of this course. Seeing my classmates’ presentations made me realize I’m not alone—facing failures and struggles between different tools and errors is completely normal. I’m also very thankful for the teachers’ continuous encouragement, acknowledging what we have accomplished and pointing out the reasons behind our difficulties. It made me feel very supported and warm.
+
+In this fast-changing era, we can no longer rely solely on teachers to explain everything in class. Making good use of available resources and continuously learning on our own is essential to sustain progress in this field.
