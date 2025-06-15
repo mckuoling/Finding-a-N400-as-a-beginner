@@ -44,10 +44,10 @@ MNE-Python
 ## Results
 
 This is the N400 example produced by ERP CORE:
-![ERP CORE Example N400](images/erp_core_n400.png)  
+![ERP CORE Example N400](erp_core_n400.png)  
 (Kappenman et al, 2021)
 
 And this is the N400 I generated using the same dataset, after adapting the original MATLAB pipeline to MNE-Python.
-![My N400 Output](images/my_n400_result.png)
+![My N400 Output](my_n400_result.png)
 
 
