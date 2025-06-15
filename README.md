@@ -32,25 +32,22 @@ The goal of the project was to use MNE-Python, the EEG analysis tool introduced 
 ### Tools
 
 MNE-Python
-The data preprocessing workflow: https://neuraldatascience.io/7-eeg/introduction.html
+[The data preprocessing workflow from NeuralDataScience](https://neuraldatascience.io/7-eeg/introduction.html)
 
 ### Data
 
-ERP CORE: N400 
-https://erpinfo.org/erp-core
+[ERP CORE: N400](https://erpinfo.org/erp-core)
 
-EEGLAB (Matlab) working pipline
-https://github.com/mckuoling/ERP_CORE/tree/master/N400%20Analysis%20Files/N400/EEG_ERP_Processing
+[EEGLAB (Matlab) working pipline](https://github.com/mckuoling/ERP_CORE/tree/master/N400%20Analysis%20Files/N400/EEG_ERP_Processing)
 
 
 ## Results
 
 This is the N400 example produced by ERP CORE:
-![ERP CORE Example N400](images/erp_core_n400.png)
 
 (Kappenman et al, 2021)
 
 And this is the N400 I generated using the same dataset, after adapting the original MATLAB pipeline to MNE-Python.
-![My N400 Output](images/my_n400_result.png)
+
 
 
