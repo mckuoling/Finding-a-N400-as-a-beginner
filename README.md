@@ -51,7 +51,7 @@ However, since this implementation was done in MNE-Python rather than MATLAB, I 
 ```python
 eog_inds, eog_scores = ica.find_bads_eog(raw, threshold=3.0)
 print(f"Subject {subject_id} EOG-like ICA components:", eog_inds)
-
+```
 
 ## Results
 
